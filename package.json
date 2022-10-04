@@ -1,0 +1,35 @@
+{
+  "name": "plant-project",
+  "version": "1.0.0",
+  "description": "Plant shop: steck:HTML,CSS,Scss,js",
+  "main": "js/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch-css": "sass --watch scss/style.css",
+    "serve": "serve",
+    "start": "npm-run-all --parallel serve watch-css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Den41kk/Plant-project.git"
+  },
+  "keywords": [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "SCSS",
+    "Git",
+    "Git",
+    "Hub"
+  ],
+  "author": "Denis Hudzenko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Den41kk/Plant-project/issues"
+  },
+  "homepage": "https://github.com/Den41kk/Plant-project#readme",
+  "devDependencies": {
+    "sass": "^1.55.0",
+    "serve": "^14.0.1"
+  }
+}
