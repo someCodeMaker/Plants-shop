@@ -1,0 +1,53 @@
+@import "normalize";
+@import "variables";
+@import "partials";
+@import "mixins";
+
+ul {
+  list-style: none;
+  color: $title-color;
+}
+
+a {
+  color: $title-color;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+}
+
+body {
+  padding: 0 10%;
+  box-sizing: border-box;
+  max-width: 1440px;
+  margin: 0 auto;
+
+  font-size: $main-fsize;
+  font-family: $main-font;
+  font-weight: 400;
+  color: $text-color;
+}
+
+.title,
+.header-logo {
+  font-size: $title-fsize;
+  font-family: $title-font;
+  font-weight: 700;
+  color: $title-color;
+}
+
+.btn {
+  background-color: $main-color;
+  border-radius: 5px;
+  text-align: center;
+  padding: 16px;
+  color: #fff;
+}
+
+
+/*------------------- normalize style css ^ -------------------*/

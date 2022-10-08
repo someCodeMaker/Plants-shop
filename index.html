@@ -7,7 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="Denis Hudzenko">
   <meta name="description" content="plants, buy plants, home plants ">
-  <link rel="stylesheet" href="normalize.css">
   <link rel="stylesheet" href="/css/fonts.css">
   <link rel="stylesheet" href="/css/style.css">
   <script defer src="/js/app.js"></script>
@@ -26,8 +25,8 @@
       <li class="header-nav-item"><a href="#contacts" class="header-nav-link">Contacts</a></li>
     </ul>
     <div class="header-login">
-      <button class="btn"><a href="" class="login-link">Login</a></button>
-      <button class="btn"><a href="" class="login-link">Sign In</a></button>
+      <button id="login" class="btn"><a href="" class="login-link">Login</a></button>
+      <button id="sing-in" class="btn"><a href="" class="login-link">Sign In</a></button>
     </div>
   </header>
 
@@ -41,29 +40,33 @@
           <p class="hero-left__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum dolores voluptates
             accusantium quasi nihil quae mollitia qui aut enim magni. Odio reprehenderit consectetur hic dolorem
             temporibus dolorum a quia fugiat.</p>
-          <button class="hero-btn btn">Learn More</button>
+          <div class="hero-btn__section">
+            <button class="btn">Learn More</button>
+            <div class="hero-leaf"></div>
+          </div>
           <div class="hero-left__numbers hero-numbers">
             <div class="hero-numbers__item"><b>2000+</b><span>Delivery</span></div>
             <div class="hero-numbers__item"><b>1200+</b><span>Customers</span></div>
             <div class="hero-numbers__item"><b>1000+</b><span>Product</span></div>
           </div>
         </div>
-        <div class="hero-leaf"></div>
-        <div class="hero-right hero-img">
-          <div class="hero-img__label img-label">
-            <div class="img-label__descr">Cactus stem</div>
-            <div class="img-label__line"></div>
-            <div class="img-label__point"></div>
-          </div>
-          <div class="hero-img__label">
-            <div class="img-label__descr">Cactus Thorn</div>
-            <div class="img-label__line"></div>
-            <div class="img-label__point"></div>
-          </div>
-          <div class="hero-img__label">
-            <div class="img-label__descr">Plant Media</div>
-            <div class="img-label__line"></div>
-            <div class="img-label__point"></div>
+        <div class="hero-right">
+          <div class="hero-img">
+            <div class="hero-img__label img-label">
+              <div class="img-label__point"><span></span></div>
+              <div class="img-label__line"></div>
+              <div class="img-label__descr">Cactus stem</div>
+            </div>
+            <div class="hero-img__label img-label">
+              <div class="img-label__descr">Cactus Thorn</div>
+              <div class="img-label__line"></div>
+              <div class="img-label__point"><span></span></div>
+            </div>
+            <div class="hero-img__label img-label">
+              <div class="img-label__point"><span></span></div>
+              <div class="img-label__line"></div>
+              <div class="img-label__descr">Plant Media</div>
+            </div>
           </div>
         </div>
       </div>
