@@ -1,33 +1,72 @@
+//? links hover effect
 %hover-effect {
-  &::after {
-    position: absolute;
-    content: "";
-    width: 80%;
-    height: 2px;
-    bottom: -2px;
-    left: 0;
-    background-color: $decor-color;
-    transform: rotate(-2deg);
-    animation: width .1s linear;
-  }
-
-  &:nth-child(2n) {
+  &:hover {
     &::after {
-      content: "";
       position: absolute;
-      transform: rotate(2deg);
+      content: "";
+      width: 80%;
+      height: 2px;
+      bottom: -2px;
+      left: 0;
+      background-color: $decor-color;
+      transform: rotate(-2deg);
+      animation: width .1s linear;
+    }
+
+    &:nth-child(2n) {
+      &::after {
+        content: "";
+        position: absolute;
+        transform: rotate(2deg);
+      }
+
+    }
+
+    @keyframes width {
+      0% {
+        width: 1%;
+      }
+
+      100%,
+      0% {
+        width: 80%;
+      }
+    }
+  }
+}
+
+
+//? buttons hover effect
+%btn-hover {
+  &:hover {
+    color: $main-color;
+    animation: btn 7s ease infinite;
+    background: linear-gradient(115deg, #ffff00 30%, #ffbb00 70%);
+    box-shadow: 2px 2px 8px 0px #565656;
+    background-size: 150% 150%;
+
+    a {
+      color: $main-color;
     }
 
   }
 
-  @keyframes width {
-    0% {
-      width: 1%;
+  @keyframes btn {
+
+    0%,
+    50% {
+      background-position: 50% 0%;
+    }
+
+    50%,
+    100% {
+      background-position: 100% 50%;
+
     }
 
     100%,
     0% {
-      width: 80%;
+      background-position: 0% 50%;
     }
   }
 }
