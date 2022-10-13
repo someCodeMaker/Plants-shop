@@ -1,0 +1,17 @@
+@media screen and (min-width: 998px) and (max-width: 1368px) {
+  .img-label:first-child {
+    position: absolute;
+    top: 10%;
+    right: -10%;
+  }
+
+  .img-label:nth-child(2) {
+    top: 22%;
+    left: 0;
+  }
+
+  .img-label:nth-child(3) {
+    bottom: 15%;
+    right: -20%;
+  }
+}
