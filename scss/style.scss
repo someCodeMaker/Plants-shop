@@ -745,6 +745,7 @@
     .subscribe-form {
       display: flex;
       align-items: center;
+      position: relative;
 
       &__input {
         width: 100%;
@@ -754,8 +755,9 @@
       }
 
       &__submit {
-        transform: translateX(-110%);
-        height: 95%;
+        position: absolute;
+        right: 1%;
+        height: 90%;
         padding: .7rem;
       }
     }

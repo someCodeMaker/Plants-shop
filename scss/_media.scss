@@ -55,14 +55,20 @@
 
 @media (max-width: 575px) {
 
+  .btn {
+    padding: .5rem;
+  }
+
   .title,
   .header-logo {
-    font-size: calc($main-fsize/2)
+    font-size: calc($title-fsize/2)
   }
 
   body {
     position: relative;
+    margin: 0 auto;
     z-index: 1;
+
   }
 
   .header {
@@ -155,8 +161,6 @@
       }
     }
 
-
-
     .nav__wrapper {
       background: rgb(84, 82, 82, .7);
       display: flex;
@@ -179,8 +183,6 @@
         height: 50vh;
         flex-direction: column;
         padding: 0;
-
-
 
         &-item {
           z-index: 5;
@@ -269,10 +271,8 @@
 
           button {
             margin: 0 auto;
-            padding: 1rem;
+            padding: .5rem;
           }
-
-
 
           .hero-leaf {
             position: absolute;
@@ -339,7 +339,184 @@
     }
   }
 
+  .about {
+    flex-direction: column;
+    position: relative;
+    margin-bottom: 4rem;
+
+    &-left {
+      position: absolute;
+      top: -5%;
+      right: 5%;
+
+      &__img {
+        top: 1rem;
+        left: 1rem;
+      }
+    }
+
+    &-right {
+      width: 100%;
+      text-align: center;
+
+      &__name {
+        width: 50%;
+        text-align: start;
+      }
+
+      .title {
+        width: 50%;
+        font-size: 1rem;
+      }
+
+      &__description {
+        text-align: start;
+      }
+
+      &__btn {
+        width: 40%;
+        margin: 0 auto;
+      }
+    }
+  }
+
+
+  .plants {
+    margin-bottom: 4rem;
+
+    &-sort {
+      column-gap: 0;
+    }
+
+    &-list {
+      padding: 0;
+      justify-content: center;
+
+      .plants-item {
+        flex-basis: 80%;
+        text-align: center;
+        padding: 0;
+
+        img {
+          height: 50%;
+        }
+
+        &-rating {
+          justify-content: center;
+        }
+      }
+    }
+  }
+
+  .reviews {
+    text-align: center;
+    margin-bottom: 2rem;
+
+    &-right {
+      display: none;
+    }
+
+    &-left {
+      width: 100%;
+
+      .reviews-card {
+        border-radius: 10px;
+        width: 100%;
+        text-align: start;
+      }
+    }
+
+  }
+
+  .subscribe {
+    margin-top: 0;
+    position: relative;
+
+    &-bg {
+      width: 60%;
+      right: -10%;
+      bottom: 15%;
+      height: 100%;
+    }
+
+    &-form {
+      position: absolute;
+      bottom: -15%;
+      width: 70vw;
+
+
+      input {
+        border: none;
+        outline: 1px solid $decor-color;
+        width: 100%;
+      }
+
+      &__submit {}
+    }
+  }
+
+  .instagram {
+    &-text {
+      width: 100%;
+      text-align: start;
+    }
+
+    &-photo {
+      flex-wrap: wrap;
+      justify-content: center;
+
+      &__icon {
+        height: 32.5%;
+        width: 45%;
+        top: 67%;
+        left: 27.5%;
+      }
+
+      img {
+        width: 45%;
+
+        &:last-child {
+          margin-top: 0.5rem;
+        }
+      }
+    }
+  }
+
   .footer {
-    display: none;
+    margin-top: 4rem;
+    width: 100%;
+
+    &-right {
+      width: 60%;
+      flex-direction: column;
+      order: 1;
+    }
+
+    &-left {
+      width: 40%;
+      order: 2;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+
+      &__logo {
+        font-size: 2.5rem;
+        font-family: $title-font;
+        margin: 0;
+        color: $main-color;
+      }
+
+      &__text {
+        display: none;
+      }
+
+
+    }
+
+    &-social {
+      width: 50%;
+      flex-direction: column;
+      row-gap: 1rem;
+    }
   }
 }

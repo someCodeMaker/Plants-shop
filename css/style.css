@@ -1076,6 +1076,7 @@ body {
 .subscribe-wrapper .subscribe-form {
   display: flex;
   align-items: center;
+  position: relative;
 }
 .subscribe-wrapper .subscribe-form__input {
   width: 100%;
@@ -1084,8 +1085,9 @@ body {
   border-radius: 5px;
 }
 .subscribe-wrapper .subscribe-form__submit {
-  transform: translateX(-110%);
-  height: 95%;
+  position: absolute;
+  right: 1%;
+  height: 90%;
   padding: 0.7rem;
 }
 
@@ -1192,12 +1194,16 @@ body {
   }
 }
 @media (max-width: 575px) {
+  .btn {
+    padding: 0.5rem;
+  }
   .title,
 .header-logo {
-    font-size: 0.5rem;
+    font-size: 1.25rem;
   }
   body {
     position: relative;
+    margin: 0 auto;
     z-index: 1;
   }
   .header {
@@ -1360,7 +1366,7 @@ body {
   }
   .hero-wrapper__top .hero-left .hero-btn__section button {
     margin: 0 auto;
-    padding: 1rem;
+    padding: 0.5rem;
   }
   .hero-wrapper__top .hero-left .hero-btn__section .hero-leaf {
     position: absolute;
@@ -1407,7 +1413,144 @@ body {
     flex: 0 0 20%;
     padding: 1rem;
   }
-  .footer {
+  .about {
+    flex-direction: column;
+    position: relative;
+    margin-bottom: 4rem;
+  }
+  .about-left {
+    position: absolute;
+    top: -5%;
+    right: 5%;
+  }
+  .about-left__img {
+    top: 1rem;
+    left: 1rem;
+  }
+  .about-right {
+    width: 100%;
+    text-align: center;
+  }
+  .about-right__name {
+    width: 50%;
+    text-align: start;
+  }
+  .about-right .title {
+    width: 50%;
+    font-size: 1rem;
+  }
+  .about-right__description {
+    text-align: start;
+  }
+  .about-right__btn {
+    width: 40%;
+    margin: 0 auto;
+  }
+  .plants {
+    margin-bottom: 4rem;
+  }
+  .plants-sort {
+    -moz-column-gap: 0;
+         column-gap: 0;
+  }
+  .plants-list {
+    padding: 0;
+    justify-content: center;
+  }
+  .plants-list .plants-item {
+    flex-basis: 80%;
+    text-align: center;
+    padding: 0;
+  }
+  .plants-list .plants-item img {
+    height: 50%;
+  }
+  .plants-list .plants-item-rating {
+    justify-content: center;
+  }
+  .reviews {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .reviews-right {
     display: none;
+  }
+  .reviews-left {
+    width: 100%;
+  }
+  .reviews-left .reviews-card {
+    border-radius: 10px;
+    width: 100%;
+    text-align: start;
+  }
+  .subscribe {
+    margin-top: 0;
+    position: relative;
+  }
+  .subscribe-bg {
+    width: 60%;
+    right: -10%;
+    bottom: 15%;
+    height: 100%;
+  }
+  .subscribe-form {
+    position: absolute;
+    bottom: -15%;
+    width: 70vw;
+  }
+  .subscribe-form input {
+    border: none;
+    outline: 1px solid #f97c4b;
+    width: 100%;
+  }
+  .instagram-text {
+    width: 100%;
+    text-align: start;
+  }
+  .instagram-photo {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .instagram-photo__icon {
+    height: 32.5%;
+    width: 45%;
+    top: 67%;
+    left: 27.5%;
+  }
+  .instagram-photo img {
+    width: 45%;
+  }
+  .instagram-photo img:last-child {
+    margin-top: 0.5rem;
+  }
+  .footer {
+    margin-top: 4rem;
+    width: 100%;
+  }
+  .footer-right {
+    width: 60%;
+    flex-direction: column;
+    order: 1;
+  }
+  .footer-left {
+    width: 40%;
+    order: 2;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .footer-left__logo {
+    font-size: 2.5rem;
+    font-family: goldman, serif;
+    margin: 0;
+    color: #066F14;
+  }
+  .footer-left__text {
+    display: none;
+  }
+  .footer-social {
+    width: 50%;
+    flex-direction: column;
+    row-gap: 1rem;
   }
 }/*# sourceMappingURL=style.css.map */
