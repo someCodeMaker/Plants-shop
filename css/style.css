@@ -1528,9 +1528,101 @@ body {
     width: 100%;
   }
   .footer-right {
+    margin-top: 0.5rem;
     width: 60%;
     flex-direction: column;
     order: 1;
+    justify-content: start;
+  }
+  .footer-right__list {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+    -webkit-animation: hideFooterNav 0.5s linear;
+            animation: hideFooterNav 0.5s linear;
+  }
+  @-webkit-keyframes hideFooterNav {
+    0% {
+      height: 15vh;
+      visibility: visible;
+      border-radius: 10px;
+      width: 80%;
+      background-color: #DFFFE3;
+    }
+    100% {
+      height: 0;
+      width: 0;
+      visibility: hidden;
+    }
+  }
+  @keyframes hideFooterNav {
+    0% {
+      height: 15vh;
+      visibility: visible;
+      border-radius: 10px;
+      width: 80%;
+      background-color: #DFFFE3;
+    }
+    100% {
+      height: 0;
+      width: 0;
+      visibility: hidden;
+    }
+  }
+  .footer-right__list .footer-list__item {
+    opacity: 0;
+  }
+  .footer-right .show {
+    visibility: visible;
+    -webkit-animation: showFooterNav 1s linear;
+            animation: showFooterNav 1s linear;
+    height: 15vh;
+    width: 80%;
+    padding: 1rem;
+    border-radius: 10px;
+    margin: 0;
+    background-color: #DFFFE3;
+    box-shadow: 5px 5px 10px rgb(201, 201, 201);
+    margin-bottom: 1rem;
+  }
+  .footer-right .show .footer-list__item {
+    opacity: 1;
+    transition: 1s linear;
+  }
+  .footer-right .show .footer-list__item a {
+    color: #f97c4b;
+  }
+  .footer-right .show .footer-list__item:nth-child(1) {
+    transition-delay: 0.25s;
+  }
+  .footer-right .show .footer-list__item:nth-child(2) {
+    transition-delay: 0.5s;
+  }
+  .footer-right .show .footer-list__item:nth-child(3) {
+    transition-delay: 0.75s;
+  }
+  .footer-right .show .footer-list__item:nth-child(4) {
+    transition-delay: 1s;
+  }
+  @-webkit-keyframes showFooterNav {
+    0% {
+      height: 0;
+      width: 0;
+    }
+    100% {
+      height: 15vh;
+      width: 80%;
+    }
+  }
+  @keyframes showFooterNav {
+    0% {
+      height: 0;
+      width: 0;
+    }
+    100% {
+      height: 15vh;
+      width: 80%;
+    }
   }
   .footer-left {
     width: 40%;

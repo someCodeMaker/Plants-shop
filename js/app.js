@@ -18,5 +18,21 @@ function burger() {
     }
   })
 }
-
 burger();
+
+
+//? footer menu
+// _________________________
+
+function footerMenu() {
+  const menu = document.querySelectorAll(".footer-list");
+  const menuBtn = document.querySelectorAll(".footer-right__title");
+  const menuContainer = document.querySelectorAll(".footer-right__wrapper")
+
+  menuContainer.forEach((itemn, index) => {
+    menuBtn[index].addEventListener("click", (e) => {
+      menu[index].classList.toggle("show")
+    })
+  })
+}
+footerMenu();
