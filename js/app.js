@@ -29,7 +29,7 @@ function footerMenu() {
   const menuBtn = document.querySelectorAll(".footer-right__title");
   const menuContainer = document.querySelectorAll(".footer-right__wrapper")
 
-  menuContainer.forEach((itemn, index) => {
+  menuContainer.forEach((item, index) => {
     menuBtn[index].addEventListener("click", (e) => {
       menu[index].classList.toggle("show")
     })
