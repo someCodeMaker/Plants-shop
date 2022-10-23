@@ -1,0 +1,105 @@
+//? button border animation mixin
+@mixin borderAnimation ($color, $shadow, $direction, $one: 0s, $two: .25s, $three: .5s, $four: .75s) {
+  color: $shadow;
+
+  span {
+    display: block;
+    background: linear-gradient(360deg, transparent, $color);
+    box-shadow:
+      0 0 5px $shadow,
+      0 0 25px $shadow,
+      0 0 50px $shadow,
+      0 0 100px $shadow;
+    ;
+
+    &:nth-child(1) {
+      position: absolute;
+      left: -($direction);
+      top: 0;
+      height: 2px;
+      width: 100%;
+      animation: line1 1s linear infinite;
+    }
+
+    @keyframes line1 {
+
+      0% {
+        left: -($direction);
+      }
+
+      50%,
+      100% {
+        left: $direction;
+      }
+
+    }
+
+    &:nth-child(2) {
+      position: absolute;
+      height: 100%;
+      width: 2px;
+      right: 0;
+      top: -($direction);
+      animation: line2 1s linear infinite;
+      animation-delay: $two;
+    }
+
+    @keyframes line2 {
+
+      0% {
+        top: -($direction);
+      }
+
+      50%,
+      100% {
+        top: $direction;
+      }
+    }
+
+    &:nth-child(3) {
+      position: absolute;
+      left: $direction;
+      bottom: 0;
+      height: 2px;
+      width: 100%;
+      animation: line3 1s linear infinite;
+      animation-delay: .5s;
+    }
+
+    @keyframes line3 {
+
+      0% {
+        left: $direction;
+      }
+
+      50%,
+      100% {
+        left: -($direction);
+      }
+    }
+
+    &:nth-child(4) {
+      position: absolute;
+      left: 0;
+      bottom: -($direction);
+      height: 100%;
+      width: 2px;
+      animation: line4 1s linear infinite;
+      animation-delay: $four;
+    }
+
+    @keyframes line4 {
+
+      0% {
+        top: $direction;
+      }
+
+      50%,
+      100% {
+        top: -($direction);
+      }
+    }
+
+  }
+
+}
