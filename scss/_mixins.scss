@@ -1,6 +1,6 @@
 //? button border animation mixin
-@mixin borderAnimation ($color, $shadow, $direction, $one: 0s, $two: .25s, $three: .5s, $four: .75s) {
-  color: $shadow;
+@mixin borderAnimation ($text, $color, $shadow, $direction, $one: 0s, $two: .25s, $three: .5s, $four: .75s) {
+  color: $text;
 
   span {
     display: block;

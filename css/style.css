@@ -333,7 +333,7 @@ template {
   height: 2px;
   bottom: -2px;
   left: 0;
-  background-color: #f97c4b;
+  background-color: #FAA44B;
   transform: rotate(-2deg);
   -webkit-animation: width 0.1s linear;
           animation: width 0.1s linear;
@@ -364,7 +364,7 @@ template {
   color: #066F14;
   -webkit-animation: btn 7s ease infinite;
           animation: btn 7s ease infinite;
-  background: linear-gradient(115deg, #ffff00 30%, #ffbb00 70%);
+  background: linear-gradient(115deg, #FAEE4B 30%, #FAA44B 70%);
   box-shadow: 2px 2px 8px 0px #565656;
   background-size: 150% 150%;
 }
@@ -442,6 +442,343 @@ body {
 }
 
 /*------------------- normalize style css ^ -------------------*/
+.sign-open,
+.login-open {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 11;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, rgb(137, 214, 148) -0.97%, rgb(255, 211, 79) 100.57%);
+}
+.sign-open .close-btn,
+.login-open .close-btn {
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: none;
+}
+.sign-open .close-btn::before,
+.login-open .close-btn::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(to right, #4d69f5 0%, #066F14 100%);
+  background-size: 200%;
+  transform: rotate(-45deg);
+  box-shadow: 0 0 5px #4D69F5;
+  -webkit-animation: btn 3s ease infinite;
+          animation: btn 3s ease infinite;
+}
+.sign-open .close-btn::after,
+.login-open .close-btn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(to right, #4d69f5 0%, #066F14 100%);
+  background-size: 200%;
+  transform: rotate(45deg);
+  box-shadow: 0 0 5px #4D69F5;
+  -webkit-animation: btn 2s ease infinite;
+          animation: btn 2s ease infinite;
+}
+
+.sign-form,
+.login-form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+  font-family: "goldman";
+}
+.sign-form h2,
+.login-form h2 {
+  text-align: center;
+  font-family: "goldman";
+}
+.sign-form input,
+.sign-form .login-btn,
+.login-form input,
+.login-form .login-btn {
+  cursor: pointer;
+  background: transparent;
+  border: 0.5px solid #383A39;
+  border-radius: 10px;
+  padding: 1rem;
+}
+.sign-form input:hover:not(input[type=checkbox]), .sign-form input:focus:not(input[type=checkbox]), .sign-form input:active:not(input[type=checkbox]), .sign-form input:target:not(input[type=checkbox]),
+.sign-form .login-btn:hover:not(input[type=checkbox]),
+.sign-form .login-btn:focus:not(input[type=checkbox]),
+.sign-form .login-btn:active:not(input[type=checkbox]),
+.sign-form .login-btn:target:not(input[type=checkbox]),
+.login-form input:hover:not(input[type=checkbox]),
+.login-form input:focus:not(input[type=checkbox]),
+.login-form input:active:not(input[type=checkbox]),
+.login-form input:target:not(input[type=checkbox]),
+.login-form .login-btn:hover:not(input[type=checkbox]),
+.login-form .login-btn:focus:not(input[type=checkbox]),
+.login-form .login-btn:active:not(input[type=checkbox]),
+.login-form .login-btn:target:not(input[type=checkbox]) {
+  outline: 1px solid #4D69F5;
+  border: 0.5px solid #4D69F5;
+  color: #4D69F5;
+}
+.sign-form input:hover:not(input[type=checkbox])::-moz-placeholder, .sign-form input:focus:not(input[type=checkbox])::-moz-placeholder, .sign-form input:active:not(input[type=checkbox])::-moz-placeholder, .sign-form input:target:not(input[type=checkbox])::-moz-placeholder, .sign-form .login-btn:hover:not(input[type=checkbox])::-moz-placeholder, .sign-form .login-btn:focus:not(input[type=checkbox])::-moz-placeholder, .sign-form .login-btn:active:not(input[type=checkbox])::-moz-placeholder, .sign-form .login-btn:target:not(input[type=checkbox])::-moz-placeholder, .login-form input:hover:not(input[type=checkbox])::-moz-placeholder, .login-form input:focus:not(input[type=checkbox])::-moz-placeholder, .login-form input:active:not(input[type=checkbox])::-moz-placeholder, .login-form input:target:not(input[type=checkbox])::-moz-placeholder, .login-form .login-btn:hover:not(input[type=checkbox])::-moz-placeholder, .login-form .login-btn:focus:not(input[type=checkbox])::-moz-placeholder, .login-form .login-btn:active:not(input[type=checkbox])::-moz-placeholder, .login-form .login-btn:target:not(input[type=checkbox])::-moz-placeholder {
+  color: #4D69F5;
+}
+.sign-form input:hover:not(input[type=checkbox]):-ms-input-placeholder, .sign-form input:focus:not(input[type=checkbox]):-ms-input-placeholder, .sign-form input:active:not(input[type=checkbox]):-ms-input-placeholder, .sign-form input:target:not(input[type=checkbox]):-ms-input-placeholder, .sign-form .login-btn:hover:not(input[type=checkbox]):-ms-input-placeholder, .sign-form .login-btn:focus:not(input[type=checkbox]):-ms-input-placeholder, .sign-form .login-btn:active:not(input[type=checkbox]):-ms-input-placeholder, .sign-form .login-btn:target:not(input[type=checkbox]):-ms-input-placeholder, .login-form input:hover:not(input[type=checkbox]):-ms-input-placeholder, .login-form input:focus:not(input[type=checkbox]):-ms-input-placeholder, .login-form input:active:not(input[type=checkbox]):-ms-input-placeholder, .login-form input:target:not(input[type=checkbox]):-ms-input-placeholder, .login-form .login-btn:hover:not(input[type=checkbox]):-ms-input-placeholder, .login-form .login-btn:focus:not(input[type=checkbox]):-ms-input-placeholder, .login-form .login-btn:active:not(input[type=checkbox]):-ms-input-placeholder, .login-form .login-btn:target:not(input[type=checkbox]):-ms-input-placeholder {
+  color: #4D69F5;
+}
+.sign-form input:hover:not(input[type=checkbox])::placeholder, .sign-form input:focus:not(input[type=checkbox])::placeholder, .sign-form input:active:not(input[type=checkbox])::placeholder, .sign-form input:target:not(input[type=checkbox])::placeholder,
+.sign-form .login-btn:hover:not(input[type=checkbox])::placeholder,
+.sign-form .login-btn:focus:not(input[type=checkbox])::placeholder,
+.sign-form .login-btn:active:not(input[type=checkbox])::placeholder,
+.sign-form .login-btn:target:not(input[type=checkbox])::placeholder,
+.login-form input:hover:not(input[type=checkbox])::placeholder,
+.login-form input:focus:not(input[type=checkbox])::placeholder,
+.login-form input:active:not(input[type=checkbox])::placeholder,
+.login-form input:target:not(input[type=checkbox])::placeholder,
+.login-form .login-btn:hover:not(input[type=checkbox])::placeholder,
+.login-form .login-btn:focus:not(input[type=checkbox])::placeholder,
+.login-form .login-btn:active:not(input[type=checkbox])::placeholder,
+.login-form .login-btn:target:not(input[type=checkbox])::placeholder {
+  color: #4D69F5;
+}
+.sign-form input:active:not(input[type=checkbox])::-moz-placeholder, .sign-form input:focus:not(input[type=checkbox])::-moz-placeholder, .sign-form input:target:not(input[type=checkbox])::-moz-placeholder, .sign-form .login-btn:active:not(input[type=checkbox])::-moz-placeholder, .sign-form .login-btn:focus:not(input[type=checkbox])::-moz-placeholder, .sign-form .login-btn:target:not(input[type=checkbox])::-moz-placeholder, .login-form input:active:not(input[type=checkbox])::-moz-placeholder, .login-form input:focus:not(input[type=checkbox])::-moz-placeholder, .login-form input:target:not(input[type=checkbox])::-moz-placeholder, .login-form .login-btn:active:not(input[type=checkbox])::-moz-placeholder, .login-form .login-btn:focus:not(input[type=checkbox])::-moz-placeholder, .login-form .login-btn:target:not(input[type=checkbox])::-moz-placeholder {
+  color: transparent;
+}
+.sign-form input:active:not(input[type=checkbox]):-ms-input-placeholder, .sign-form input:focus:not(input[type=checkbox]):-ms-input-placeholder, .sign-form input:target:not(input[type=checkbox]):-ms-input-placeholder, .sign-form .login-btn:active:not(input[type=checkbox]):-ms-input-placeholder, .sign-form .login-btn:focus:not(input[type=checkbox]):-ms-input-placeholder, .sign-form .login-btn:target:not(input[type=checkbox]):-ms-input-placeholder, .login-form input:active:not(input[type=checkbox]):-ms-input-placeholder, .login-form input:focus:not(input[type=checkbox]):-ms-input-placeholder, .login-form input:target:not(input[type=checkbox]):-ms-input-placeholder, .login-form .login-btn:active:not(input[type=checkbox]):-ms-input-placeholder, .login-form .login-btn:focus:not(input[type=checkbox]):-ms-input-placeholder, .login-form .login-btn:target:not(input[type=checkbox]):-ms-input-placeholder {
+  color: transparent;
+}
+.sign-form input:active:not(input[type=checkbox])::placeholder, .sign-form input:focus:not(input[type=checkbox])::placeholder, .sign-form input:target:not(input[type=checkbox])::placeholder,
+.sign-form .login-btn:active:not(input[type=checkbox])::placeholder,
+.sign-form .login-btn:focus:not(input[type=checkbox])::placeholder,
+.sign-form .login-btn:target:not(input[type=checkbox])::placeholder,
+.login-form input:active:not(input[type=checkbox])::placeholder,
+.login-form input:focus:not(input[type=checkbox])::placeholder,
+.login-form input:target:not(input[type=checkbox])::placeholder,
+.login-form .login-btn:active:not(input[type=checkbox])::placeholder,
+.login-form .login-btn:focus:not(input[type=checkbox])::placeholder,
+.login-form .login-btn:target:not(input[type=checkbox])::placeholder {
+  color: transparent;
+}
+.sign-form input[type=checkbox],
+.login-form input[type=checkbox] {
+  margin: 1rem 0;
+}
+.sign-form input[type=checkbox]:checked,
+.login-form input[type=checkbox]:checked {
+  accent-color: #4D69F5;
+}
+.sign-form .input-conteiner,
+.login-form .input-conteiner {
+  position: relative;
+}
+.sign-form .input-conteiner input,
+.login-form .input-conteiner input {
+  padding-left: 2.5rem;
+}
+.sign-form .input-conteiner label,
+.login-form .input-conteiner label {
+  position: absolute;
+  top: 33%;
+  left: 1rem;
+  color: rgb(120, 120, 120);
+  transform: scale(1.1);
+}
+.sign-form .login-btn,
+.login-form .login-btn {
+  color: rgb(120, 120, 120);
+  text-align: start;
+}
+.sign-form .login-btn .fa-brands,
+.login-form .login-btn .fa-brands {
+  transform: scale(1.7);
+  margin-right: 1rem;
+}
+.sign-form .login-btn .fa-google,
+.login-form .login-btn .fa-google {
+  color: #8F62F5;
+}
+.sign-form .login-btn .fa-facebook-f,
+.login-form .login-btn .fa-facebook-f {
+  color: #4D69F5;
+}
+.sign-form .btn,
+.login-form .btn {
+  padding: 1rem;
+  background-color: #4D69F5;
+  overflow: hidden;
+  position: relative;
+  box-shadow: inset 0 0 10px #8F62F5;
+  text-align: center;
+}
+.sign-form .btn:hover,
+.login-form .btn:hover {
+  background: #FAA44B;
+  box-shadow: 0 0 20px #FAA44B;
+}
+.sign-form .btn:hover .btn-login,
+.sign-form .btn:hover .btn-sign,
+.login-form .btn:hover .btn-login,
+.login-form .btn:hover .btn-sign {
+  color: #fff;
+}
+.sign-form .btn:hover .btn-login span,
+.sign-form .btn:hover .btn-sign span,
+.login-form .btn:hover .btn-login span,
+.login-form .btn:hover .btn-sign span {
+  display: none;
+}
+.sign-form .btn .btn-sign,
+.login-form .btn .btn-sign {
+  color: #fff;
+}
+.sign-form .btn .btn-sign span,
+.login-form .btn .btn-sign span {
+  display: block;
+  background: linear-gradient(360deg, transparent, #fff);
+  box-shadow: 0 0 5px #fff, 0 0 25px #fff, 0 0 50px #fff, 0 0 100px #fff;
+}
+.sign-form .btn .btn-sign span:nth-child(1),
+.login-form .btn .btn-sign span:nth-child(1) {
+  position: absolute;
+  left: -100%;
+  top: 0;
+  height: 2px;
+  width: 100%;
+  -webkit-animation: line1 1s linear infinite;
+          animation: line1 1s linear infinite;
+}
+@-webkit-keyframes line1 {
+  0% {
+    left: -100%;
+  }
+  50%, 100% {
+    left: 100%;
+  }
+}
+@keyframes line1 {
+  0% {
+    left: -100%;
+  }
+  50%, 100% {
+    left: 100%;
+  }
+}
+.sign-form .btn .btn-sign span:nth-child(2),
+.login-form .btn .btn-sign span:nth-child(2) {
+  position: absolute;
+  height: 100%;
+  width: 2px;
+  right: 0;
+  top: -100%;
+  -webkit-animation: line2 1s linear infinite;
+          animation: line2 1s linear infinite;
+  -webkit-animation-delay: 0.25s;
+          animation-delay: 0.25s;
+}
+@-webkit-keyframes line2 {
+  0% {
+    top: -100%;
+  }
+  50%, 100% {
+    top: 100%;
+  }
+}
+@keyframes line2 {
+  0% {
+    top: -100%;
+  }
+  50%, 100% {
+    top: 100%;
+  }
+}
+.sign-form .btn .btn-sign span:nth-child(3),
+.login-form .btn .btn-sign span:nth-child(3) {
+  position: absolute;
+  left: 100%;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  -webkit-animation: line3 1s linear infinite;
+          animation: line3 1s linear infinite;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+@-webkit-keyframes line3 {
+  0% {
+    left: 100%;
+  }
+  50%, 100% {
+    left: -100%;
+  }
+}
+@keyframes line3 {
+  0% {
+    left: 100%;
+  }
+  50%, 100% {
+    left: -100%;
+  }
+}
+.sign-form .btn .btn-sign span:nth-child(4),
+.login-form .btn .btn-sign span:nth-child(4) {
+  position: absolute;
+  left: 0;
+  bottom: -100%;
+  height: 100%;
+  width: 2px;
+  -webkit-animation: line4 1s linear infinite;
+          animation: line4 1s linear infinite;
+  -webkit-animation-delay: 0.75s;
+          animation-delay: 0.75s;
+}
+@-webkit-keyframes line4 {
+  0% {
+    top: 100%;
+  }
+  50%, 100% {
+    top: -100%;
+  }
+}
+@keyframes line4 {
+  0% {
+    top: 100%;
+  }
+  50%, 100% {
+    top: -100%;
+  }
+}
+
+.sign-close {
+  display: none;
+}
+
+.login-close {
+  display: none;
+}
+
+@media screen and (max-width: 575px) {
+  .sign-open .close-btn,
+.login-open .close-btn {
+    top: 85%;
+    right: 47%;
+  }
+}
 .header {
   display: flex;
   justify-content: space-between;
@@ -498,14 +835,6 @@ body {
   -webkit-animation: line1 1s linear infinite;
           animation: line1 1s linear infinite;
 }
-@-webkit-keyframes line1 {
-  0% {
-    left: 100%;
-  }
-  50%, 100% {
-    left: -100%;
-  }
-}
 @keyframes line1 {
   0% {
     left: 100%;
@@ -524,14 +853,6 @@ body {
           animation: line2 1s linear infinite;
   -webkit-animation-delay: 0.25s;
           animation-delay: 0.25s;
-}
-@-webkit-keyframes line2 {
-  0% {
-    top: 100%;
-  }
-  50%, 100% {
-    top: -100%;
-  }
 }
 @keyframes line2 {
   0% {
@@ -552,14 +873,6 @@ body {
   -webkit-animation-delay: 0.5s;
           animation-delay: 0.5s;
 }
-@-webkit-keyframes line3 {
-  0% {
-    left: -100%;
-  }
-  50%, 100% {
-    left: 100%;
-  }
-}
 @keyframes line3 {
   0% {
     left: -100%;
@@ -579,14 +892,6 @@ body {
   -webkit-animation-delay: 0.75s;
           animation-delay: 0.75s;
 }
-@-webkit-keyframes line4 {
-  0% {
-    top: -100%;
-  }
-  50%, 100% {
-    top: 100%;
-  }
-}
 @keyframes line4 {
   0% {
     top: -100%;
@@ -596,12 +901,12 @@ body {
   }
 }
 .header-login .btn-login {
-  color: #f97c4b;
+  color: #FAA44B;
 }
 .header-login .btn-login span {
   display: block;
-  background: linear-gradient(360deg, transparent, #f97c4b);
-  box-shadow: 0 0 5px #f97c4b, 0 0 25px #f97c4b, 0 0 50px #f97c4b, 0 0 100px #f97c4b;
+  background: linear-gradient(360deg, transparent, #FAA44B);
+  box-shadow: 0 0 5px #FAA44B, 0 0 25px #FAA44B, 0 0 50px #FAA44B, 0 0 100px #FAA44B;
 }
 .header-login .btn-login span:nth-child(1) {
   position: absolute;
@@ -678,8 +983,8 @@ body {
   }
 }
 .header-login .btn:hover {
-  background: #ffbb00;
-  box-shadow: 0 0 20px #ffbb00;
+  background: #FAA44B;
+  box-shadow: 0 0 20px #FAA44B;
 }
 .header-login .btn:hover .btn-login,
 .header-login .btn:hover .btn-sign {
@@ -875,7 +1180,7 @@ body {
   border-radius: 100%;
   width: 4px;
   height: 4px;
-  background-color: #f97c4b;
+  background-color: #FAA44B;
 }
 .hero-wrapper__bottom {
   width: 100%;
@@ -914,7 +1219,7 @@ body {
   height: 2px;
   bottom: -3px;
   left: 0;
-  background-color: #f97c4b;
+  background-color: #FAA44B;
   transform: rotate(-2deg);
   -webkit-animation: width 0.3s linear;
           animation: width 0.3s linear;
@@ -954,7 +1259,7 @@ body {
   }
 }
 .hero-wrapper__bottom .colection-all:hover svg path {
-  fill: #f97c4b;
+  fill: #FAA44B;
 }
 .hero-wrapper__bottom .colection-plants {
   width: 50%;
@@ -1243,7 +1548,7 @@ body {
   cursor: pointer;
 }
 .footer-left .footer-social-img:hover svg path {
-  fill: #f97c4b;
+  fill: #FAA44B;
 }
 .footer-right {
   width: 60%;
@@ -1604,7 +1909,7 @@ body {
     display: block;
     width: 10%;
     height: 2px;
-    background-color: #f97c4b;
+    background-color: #FAA44B;
     position: relative;
     z-index: 3;
     transition: 0.4s linear;
@@ -1616,7 +1921,7 @@ body {
     bottom: -0.5rem;
     width: 100%;
     height: 2px;
-    background-color: #f97c4b;
+    background-color: #FAA44B;
     transition: 0.4s linear;
   }
   .header-burger::before {
@@ -1626,7 +1931,7 @@ body {
     top: -0.5rem;
     width: 70%;
     height: 2px;
-    background-color: #f97c4b;
+    background-color: #FAA44B;
     transition: 0.4s linear;
   }
   .header .open {
@@ -1643,9 +1948,9 @@ body {
     bottom: 0;
     width: 100%;
     height: 2px;
-    background-color: #f97c4b;
+    background-color: #FAA44B;
     transform: rotate(45deg);
-    box-shadow: 0 0 5px #f97c4b;
+    box-shadow: 0 0 5px #FAA44B;
   }
   .header .open::before {
     content: "";
@@ -1710,7 +2015,7 @@ body {
     font-size: 1.5rem;
   }
   .header .nav__wrapper .header-nav-item a:hover, .header .nav__wrapper .header-nav-item a:focus, .header .nav__wrapper .header-nav-item a:active {
-    color: #f97c4b;
+    color: #FAA44B;
     text-shadow: 0px 0px 30px #066F14;
   }
   .header .open-menu {
@@ -1881,7 +2186,7 @@ body {
   }
   .subscribe-form input {
     border: none;
-    outline: 1px solid #f97c4b;
+    outline: 1px solid #FAA44B;
     width: 100%;
   }
   .instagram-text {
@@ -1971,7 +2276,7 @@ body {
     transition: 0.5s linear;
   }
   .footer-right .show .footer-list__item a {
-    color: #f97c4b;
+    color: #FAA44B;
   }
   .footer-right .show .footer-list__item:nth-child(1) {
     transition-delay: 0.11s;

@@ -55,18 +55,18 @@
 
 
       &-sign {
-        @include borderAnimation ($main-color, $main-color, -100%);
+        @include borderAnimation ($main-color, $main-color, $main-color, -100%);
       }
 
 
       &-login {
-        @include borderAnimation ($decor-color, $decor-color,
+        @include borderAnimation ($decor-color, $decor-color, $decor-color,
           100%);
       }
 
       &:hover {
-        background: #ffbb00;
-        box-shadow: 0 0 20px #ffbb00;
+        background: $decor-color;
+        box-shadow: 0 0 20px $decor-color;
 
         .btn-login,
         .btn-sign {

@@ -9,6 +9,7 @@
   <meta name="description" content="plants, buy plants, home plants ">
   <link rel="stylesheet" href="/css/fonts.css">
   <link rel="stylesheet" href="/css/style.css">
+  <script defer src="https://kit.fontawesome.com/fa60002a98.js" crossorigin="anonymous"></script>
   <script defer src="/js/app.js"></script>
   <title>Document</title>
 </head>
@@ -18,7 +19,7 @@
   <header class="header">
     <div class="header-mob">
       <h1 class="header-logo"><a href="/index.html" class="header-logo__link">Plant</a></h1>
-      <div id="burger" class="header-burger"></div>
+      <button type="menu" id="burger" class="header-burger"></button>
     </div>
     <div id="menu" class="nav__wrapper">
       <ul class="header-nav">
@@ -34,11 +35,67 @@
         <div class="btn-login"><span></span><span></span><span></span><span></span>Login</div>
       </button>
       <button id="sing-in" class="btn ">
-        <div class="btn-sign">Sign In
+        <div class="btn-sign">Sign Up
           <span></span><span></span><span></span><span></span>
         </div>
       </button>
     </div>
+    <section class="login-close">
+      <button class="close-btn close-login"></button>
+      <form action="" class="login-form">
+        <h2>Log In</h2>
+        <div class="input-conteiner"><label for="email"><i class="fa-regular fa-envelope"></i></label>
+          <input type="email" name="email" id="email" placeholder="Email" required>
+        </div>
+        <div class="input-conteiner">
+          <label for="password"><i class="fa-solid fa-lock"></i></label>
+          <input type="password" name="password" id="password" placeholder="Password" required>
+        </div>
+        <button type="submit" class="login-btn"><i class="fa-brands fa-google"></i>Continue with Google</button>
+        <button type="submit" class="login-btn"><i class="fa-brands fa-facebook-f"></i>Continue with Facebook</button>
+        <button type="submit" class="btn">
+          <div class="btn-sign">Sign up
+            <span></span><span></span><span></span><span></span>
+          </div>
+        </button>
+      </form>
+    </section>
+    <section class="sign-close">
+      <button class="close-btn close-sign">
+      </button>
+      <form action="" class="sign-form">
+        <h2>Sign Up</h2>
+
+        <div class="input-conteiner"><label for="name"><i class="fa-regular fa-user"></i></label>
+          <input type="text" name="name" id="name" placeholder="Name" required>
+        </div>
+
+        <div class="input-conteiner"><label for="email-sign"><i class="fa-regular fa-envelope"></i></label>
+          <input type="email" name="email-sign" id="email-sign" placeholder="Email" required>
+        </div>
+
+        <div class="input-conteiner">
+          <label for="password-sign"><i class="fa-solid fa-lock"></i></label>
+          <input type="password" name="password-sign" id="password-sign" placeholder="Password" required>
+        </div>
+
+        <div class="input-conteiner"><label for="phone"><i class="fa-solid fa-mobile-screen-button"></i></label>
+          <input type="tel" name="phone" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"
+            placeholder="+380931234567" required>
+        </div>
+
+
+        <div class="sign-checkbox">
+          <input type="checkbox" name="policy" id="policy" required checked>
+          <label for="policy">Confirm site policy</label>
+        </div>
+        <button type="submit" class="btn">
+          <div class="btn-sign">Sign up
+            <span></span><span></span><span></span><span></span>
+          </div>
+        </button>
+      </form>
+    </section>
   </header>
 
   <!-- ! main -->
@@ -355,7 +412,8 @@
         <p class="subscribe-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu, at tempor, accumsan sit
           amet nunc cursus. </p>
         <form action="" class="subscribe-form">
-          <input class="subscribe-form__input" type="email" name="email" id="email" placeholder="Enter email...">
+          <input class="subscribe-form__input" type="email" name="email-subscribe" id="email-subscribe"
+            placeholder="Enter email...">
           <button class="subscribe-form__submit btn" type="submit">Subscribe</button>
         </form>
       </div>
