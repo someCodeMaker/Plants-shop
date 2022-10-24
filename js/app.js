@@ -1,5 +1,5 @@
 
-//? burger menu
+//! burger menu
 //__________________________
 function burger() {
   const burger = document.getElementById("burger");
@@ -21,7 +21,7 @@ function burger() {
 burger();
 
 
-//? footer menu
+//! footer menu
 // _________________________
 
 function footerMenu() {
@@ -37,8 +37,9 @@ function footerMenu() {
 }
 footerMenu();
 
-//? Login|Sign-in button
 
+//! Login|Sign-in button
+// _________________________________
 function authorizationBtn() {
   const login = document.getElementById("login");
   const sign = document.getElementById("sing-in");

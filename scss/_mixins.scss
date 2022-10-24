@@ -101,5 +101,53 @@
     }
 
   }
+}
+
+//? close btn
+@mixin close-btn () {
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: none;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, #4d69f5 0%, $main-color 100%);
+    background-size: 200%;
+    transform: rotate(-45deg);
+    box-shadow: 0 0 5px #4D69F5;
+    animation: btn 3s ease infinite;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, #4d69f5 0%, $main-color 100%);
+    background-size: 200%;
+    transform: rotate(45deg);
+    box-shadow: 0 0 5px #4D69F5;
+    animation: btn 2s ease infinite;
+  }
+
+  &:hover {
+
+    &::after,
+    &::before {
+      box-shadow: 0 0 5px #4D69F5, 0 0 5px $main-color;
+
+    }
+  }
 
 }

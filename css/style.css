@@ -362,8 +362,8 @@ template {
 
 .btn:hover {
   color: #066F14;
-  -webkit-animation: btn 7s ease infinite;
-          animation: btn 7s ease infinite;
+  -webkit-animation: btn 5s ease infinite;
+          animation: btn 5s ease infinite;
   background: linear-gradient(115deg, #FAEE4B 30%, #FAA44B 70%);
   box-shadow: 2px 2px 8px 0px #565656;
   background-size: 150% 150%;
@@ -404,6 +404,11 @@ a {
   color: #1A1A1A;
 }
 
+a,
+button {
+  cursor: url("/img/pointer.svg"), auto;
+}
+
 p,
 h1,
 h2,
@@ -414,6 +419,7 @@ h5 {
 }
 
 body {
+  cursor: url("/img/cursor.svg"), auto;
   padding: 0 10%;
   box-sizing: border-box;
   max-width: 1440px;
@@ -496,6 +502,11 @@ body {
   -webkit-animation: btn 2s ease infinite;
           animation: btn 2s ease infinite;
 }
+.sign-open .close-btn:hover::after, .sign-open .close-btn:hover::before,
+.login-open .close-btn:hover::after,
+.login-open .close-btn:hover::before {
+  box-shadow: 0 0 5px #4D69F5, 0 0 5px #066F14;
+}
 
 .sign-form,
 .login-form {
@@ -533,7 +544,7 @@ body {
 .login-form .login-btn:active:not(input[type=checkbox]),
 .login-form .login-btn:target:not(input[type=checkbox]) {
   outline: 1px solid #4D69F5;
-  border: 0.5px solid #4D69F5;
+  border-bottom: 0.5px solid #4D69F5;
   color: #4D69F5;
 }
 .sign-form input:hover:not(input[type=checkbox])::-moz-placeholder, .sign-form input:focus:not(input[type=checkbox])::-moz-placeholder, .sign-form input:active:not(input[type=checkbox])::-moz-placeholder, .sign-form input:target:not(input[type=checkbox])::-moz-placeholder, .sign-form .login-btn:hover:not(input[type=checkbox])::-moz-placeholder, .sign-form .login-btn:focus:not(input[type=checkbox])::-moz-placeholder, .sign-form .login-btn:active:not(input[type=checkbox])::-moz-placeholder, .sign-form .login-btn:target:not(input[type=checkbox])::-moz-placeholder, .login-form input:hover:not(input[type=checkbox])::-moz-placeholder, .login-form input:focus:not(input[type=checkbox])::-moz-placeholder, .login-form input:active:not(input[type=checkbox])::-moz-placeholder, .login-form input:target:not(input[type=checkbox])::-moz-placeholder, .login-form .login-btn:hover:not(input[type=checkbox])::-moz-placeholder, .login-form .login-btn:focus:not(input[type=checkbox])::-moz-placeholder, .login-form .login-btn:active:not(input[type=checkbox])::-moz-placeholder, .login-form .login-btn:target:not(input[type=checkbox])::-moz-placeholder {
@@ -779,6 +790,255 @@ body {
     right: 47%;
   }
 }
+.cart {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, rgb(137, 214, 148) -0.97%, rgb(255, 211, 79) 100.57%);
+  z-index: 11;
+  padding: 5% 0 10% 10%;
+  display: none;
+}
+.cart .close-btn {
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: none;
+  top: 5%;
+  right: 15%;
+}
+.cart .close-btn::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(to right, #4d69f5 0%, #066F14 100%);
+  background-size: 200%;
+  transform: rotate(-45deg);
+  box-shadow: 0 0 5px #4D69F5;
+  -webkit-animation: btn 3s ease infinite;
+          animation: btn 3s ease infinite;
+}
+.cart .close-btn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(to right, #4d69f5 0%, #066F14 100%);
+  background-size: 200%;
+  transform: rotate(45deg);
+  box-shadow: 0 0 5px #4D69F5;
+  -webkit-animation: btn 2s ease infinite;
+          animation: btn 2s ease infinite;
+}
+.cart .close-btn:hover::after, .cart .close-btn:hover::before {
+  box-shadow: 0 0 5px #4D69F5, 0 0 5px #066F14;
+}
+.cart-title {
+  color: #4d69f5;
+  border-bottom: 0.5px solid rgba(56, 58, 57, 0.37);
+  display: inline;
+  padding-bottom: 0.5rem;
+}
+.cart-info {
+  color: rgba(56, 58, 57, 0.37);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 25%;
+  border-bottom: 0.5px solid rgba(56, 58, 57, 0.37);
+  margin: 0 auto;
+  margin-top: 2.5rem;
+  padding-bottom: 0.5rem;
+}
+.cart-info__item {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+  width: 75%;
+}
+.cart-item {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 4%;
+}
+.cart-item__img {
+  width: 10%;
+}
+.cart-item__name {
+  font-size: 1rem;
+  margin-left: 5%;
+  text-transform: uppercase;
+  font-family: "goldman";
+  width: 20%;
+  margin-right: 15%;
+}
+.cart-item__conteiner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 45%;
+  font-family: "goldman";
+}
+.cart-item__conteiner button {
+  background: transparent;
+  border: none;
+  color: rgba(56, 58, 57, 0.37);
+}
+.cart-item__conteiner button:hover {
+  color: #FAA44B;
+}
+.cart-item__conteiner .cart-item__delete {
+  font-size: 2rem;
+  transform: rotate(45deg);
+}
+.cart-item-btn:first-child {
+  margin-right: 0.5rem;
+}
+.cart-item-btn:last-child {
+  margin-left: 0.5rem;
+}
+.cart-line {
+  width: 70%;
+  height: 0.5px;
+  background: rgba(56, 58, 57, 0.37);
+  border: none;
+}
+.cart-footer {
+  margin-top: 2rem;
+  display: flex;
+  width: 72%;
+  justify-content: end;
+}
+.cart-footer .cart-footer__wrapper {
+  width: 25%;
+}
+.cart-footer .cart-footer__wrapper .total-price {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  font-family: "goldman";
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border-bottom: 0.5px solid rgba(56, 58, 57, 0.37);
+}
+.cart-footer .cart-footer__wrapper .cart-btn {
+  padding: 1rem;
+  width: 100%;
+  background-color: #4D69F5;
+  overflow: hidden;
+  position: relative;
+  box-shadow: inset 0 0 10px #8F62F5;
+  text-align: center;
+  color: #fff;
+}
+.cart-footer .cart-footer__wrapper .cart-btn span {
+  display: block;
+  background: linear-gradient(360deg, transparent, #fff);
+  box-shadow: 0 0 5px #fff, 0 0 25px #fff, 0 0 50px #fff, 0 0 100px #fff;
+}
+.cart-footer .cart-footer__wrapper .cart-btn span:nth-child(1) {
+  position: absolute;
+  left: -100%;
+  top: 0;
+  height: 2px;
+  width: 100%;
+  -webkit-animation: line1 1s linear infinite;
+          animation: line1 1s linear infinite;
+}
+@keyframes line1 {
+  0% {
+    left: -100%;
+  }
+  50%, 100% {
+    left: 100%;
+  }
+}
+.cart-footer .cart-footer__wrapper .cart-btn span:nth-child(2) {
+  position: absolute;
+  height: 100%;
+  width: 2px;
+  right: 0;
+  top: -100%;
+  -webkit-animation: line2 1s linear infinite;
+          animation: line2 1s linear infinite;
+  -webkit-animation-delay: 0.25s;
+          animation-delay: 0.25s;
+}
+@keyframes line2 {
+  0% {
+    top: -100%;
+  }
+  50%, 100% {
+    top: 100%;
+  }
+}
+.cart-footer .cart-footer__wrapper .cart-btn span:nth-child(3) {
+  position: absolute;
+  left: 100%;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  -webkit-animation: line3 1s linear infinite;
+          animation: line3 1s linear infinite;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+@keyframes line3 {
+  0% {
+    left: 100%;
+  }
+  50%, 100% {
+    left: -100%;
+  }
+}
+.cart-footer .cart-footer__wrapper .cart-btn span:nth-child(4) {
+  position: absolute;
+  left: 0;
+  bottom: -100%;
+  height: 100%;
+  width: 2px;
+  -webkit-animation: line4 1s linear infinite;
+          animation: line4 1s linear infinite;
+  -webkit-animation-delay: 0.75s;
+          animation-delay: 0.75s;
+}
+@keyframes line4 {
+  0% {
+    top: 100%;
+  }
+  50%, 100% {
+    top: -100%;
+  }
+}
+.cart-footer .cart-footer__wrapper .cart-btn:hover {
+  background: #FAA44B;
+  box-shadow: 0 0 20px #FAA44B;
+}
+.cart-footer .cart-footer__wrapper .cart-btn:hover .cart-btn__holder {
+  color: #fff;
+}
+.cart-footer .cart-footer__wrapper .cart-btn:hover .cart-btn__holder span {
+  display: none;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -1913,6 +2173,8 @@ body {
     position: relative;
     z-index: 3;
     transition: 0.4s linear;
+    padding: 0;
+    border: none;
   }
   .header-burger::after {
     content: "";

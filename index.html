@@ -40,6 +40,8 @@
         </div>
       </button>
     </div>
+
+    <!--? Login -->
     <section class="login-close">
       <button class="close-btn close-login"></button>
       <form action="" class="login-form">
@@ -54,12 +56,14 @@
         <button type="submit" class="login-btn"><i class="fa-brands fa-google"></i>Continue with Google</button>
         <button type="submit" class="login-btn"><i class="fa-brands fa-facebook-f"></i>Continue with Facebook</button>
         <button type="submit" class="btn">
-          <div class="btn-sign">Sign up
+          <div class="btn-sign">Sign In
             <span></span><span></span><span></span><span></span>
           </div>
         </button>
       </form>
     </section>
+
+    <!--? Sing in -->
     <section class="sign-close">
       <button class="close-btn close-sign">
       </button>
@@ -84,7 +88,6 @@
             placeholder="+380931234567" required>
         </div>
 
-
         <div class="sign-checkbox">
           <input type="checkbox" name="policy" id="policy" required checked>
           <label for="policy">Confirm site policy</label>
@@ -96,11 +99,56 @@
         </button>
       </form>
     </section>
+
+    <!--? Cart -->
+    <section class="cart">
+      <h2 class="cart-title title">Shopping cart</h2>
+      <button class="close-btn"></button>
+      <ul class="cart-info">
+        <li class="cart-info__item">Quantity</li>
+        <li class="cart-info__item">price</li>
+        <li class="cart-info__item">total</li>
+      </ul>
+      <div class="cart-items">
+        <div class="cart-item">
+          <img src="/img/item1.png" alt="plant" class="cart-item__img">
+          <span class="cart-item__name">Outdoor Plant</span>
+          <div class="cart-item__conteiner">
+            <span class="cart-item__quantity"><button class="cart-item-btn">-</button> 1<button
+                class="cart-item-btn">+</button> </span>
+            <span class="cart-item__price">50$</span>
+            <span class="cart-item__total">50$</span>
+            <button class="cart-item__delete">+</button>
+          </div>
+        </div>
+        <div class="cart-item">
+          <img src="/img/item3.png" alt="plant" class="cart-item__img">
+          <span class="cart-item__name">Outdoor Plant</span>
+          <div class="cart-item__conteiner">
+            <span class="cart-item__quantity"><button class="cart-item-btn">-</button>2<button
+                class="cart-item-btn">+</button> </span>
+            <span class="cart-item__price">50$</span>
+            <span class="cart-item__total">100$</span>
+            <button class="cart-item__delete">+</button>
+          </div>
+        </div>
+        <hr class="cart-line">
+      </div>
+
+      <div class="cart-footer">
+        <div class="cart-footer__wrapper">
+          <div class="total-price"><span>Total:</span><span>150$</span></div>
+          <button class="btn cart-btn">
+            <div class="cart-btn__holder">Buy It <span></span><span></span><span></span><span></span></div>
+          </button>
+        </div>
+      </div>
+    </section>
   </header>
 
-  <!-- ! main -->
+  <!-- ! Main -->
   <main class="main">
-    <!-- ! hero -->
+    <!-- ! Hero -->
     <section class="hero">
       <div class="hero-wrapper__top">
         <div class="hero-left">

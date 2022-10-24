@@ -468,6 +468,8 @@
       position: relative;
       z-index: 3;
       transition: .4s linear;
+      padding: 0;
+      border: none;
 
       &::after {
         content: "";
