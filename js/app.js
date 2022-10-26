@@ -71,3 +71,8 @@ function authorizationBtn() {
 }
 
 authorizationBtn();
+
+// const itemInfo = document.querySelector(".plants-item__name::before");
+// itemInfo.addEventListener("mouseover", (e) => {
+//   console.log()
+// })

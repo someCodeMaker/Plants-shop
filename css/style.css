@@ -1697,6 +1697,23 @@ body {
   padding-bottom: 1.5rem;
   height: 80%;
   text-align: start;
+  position: relative;
+}
+.plants-list .plants-item__conteiner .item-info {
+  position: absolute;
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(45deg, rgb(137, 214, 148) -0.97%, rgb(255, 211, 79) 100.57%);
+  color: #4A4A4A;
+  font-family: "nunito";
+  top: 3%;
+  z-index: 2;
+  left: 2%;
+  border-radius: 20px 20px 30% 20px;
+}
+.plants-list .plants-item__conteiner .item-info dl dt {
+  font-weight: bold;
+  font-family: "goldman";
 }
 .plants-list .plants-item__conteiner img {
   display: block;
@@ -1708,7 +1725,6 @@ body {
 }
 .plants-list .plants-item__conteiner .plants-item__name {
   display: block;
-  position: relative;
   font-weight: bold;
   font-size: 1.5rem;
   text-align: center;
@@ -1716,16 +1732,25 @@ body {
 }
 .plants-list .plants-item__conteiner .plants-item__name::before {
   content: "?";
+  font-family: "goldman";
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 5px;
   height: 5px;
   position: absolute;
-  left: 0;
-  top: -5px;
+  left: 5%;
+  top: 5%;
   border: 0.5px solid #FAA44B;
   border-radius: 50%;
   padding: 5px;
   background: #FAA44B;
   color: #fff;
+  z-index: 3;
+}
+.plants-list .plants-item__conteiner .plants-item__name::before:hover .plants-list__conteiner .item-info {
+  visibility: visible;
 }
 .plants-list .plants-item__conteiner .plants-item-rating {
   padding: 0;

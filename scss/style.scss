@@ -531,6 +531,7 @@
           .plants-item__buy {
             visibility: visible;
           }
+
         }
       }
 
@@ -558,6 +559,29 @@
         padding-bottom: 1.5rem;
         height: 80%;
         text-align: start;
+        position: relative;
+
+        .item-info {
+          position: absolute;
+          width: 100%;
+          // visibility: hidden;
+          padding: 1rem;
+          background: linear-gradient(45deg, rgb(137, 214, 148) -0.97%, rgb(255, 211, 79) 100.57%);
+          color: $text-color;
+          font-family: "nunito";
+          top: 3%;
+          z-index: 2;
+          left: 2%;
+          border-radius: 20px 20px 30% 20px;
+
+          dl {
+            dt {
+              font-weight: bold;
+              font-family: "goldman";
+            }
+          }
+
+        }
 
         img {
           display: block;
@@ -571,7 +595,6 @@
 
         .plants-item__name {
           display: block;
-          position: relative;
           font-weight: bold;
           font-size: 1.5rem;
           text-align: center;
@@ -579,16 +602,32 @@
 
           &::before {
             content: "?";
+            font-family: "goldman";
+            font-size: 11px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             width: 5px;
             height: 5px;
             position: absolute;
-            left: 0;
-            top: -5px;
+            left: 5%;
+            top: 5%;
             border: .5px solid $decor-color;
             border-radius: 50%;
             padding: 5px;
             background: $decor-color;
             color: #fff;
+            z-index: 3;
+
+            &:hover {
+              .plants-list {
+                &__conteiner {
+                  .item-info {
+                    visibility: visible;
+                  }
+                }
+              }
+            }
           }
         }
 
