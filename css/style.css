@@ -442,6 +442,7 @@ body {
   background-color: #066F14;
   border-radius: 5px;
   text-align: center;
+  font-family: "goldman";
   padding: 16px;
   color: #fff;
   border: none;
@@ -1093,12 +1094,11 @@ body {
 .header-burger {
   display: none;
 }
-.header .nav__wrapper {
-  width: 60%;
-}
 .header-nav {
   display: flex;
   justify-content: space-between;
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
 }
 .header-nav-item {
   position: relative;
@@ -1648,17 +1648,57 @@ body {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  height: 100%;
   row-gap: 1.5rem;
   margin-bottom: 2.5rem;
 }
 .plants-list .plants-item {
-  flex-basis: 20%;
+  background: #fff;
+  padding: 0 0.7rem;
+  border-radius: 0.5rem;
+  width: 20%;
+}
+.plants-list .plants-item:hover {
+  background: linear-gradient(45deg, rgb(137, 214, 148) -0.97%, rgb(255, 211, 79) 100.57%);
+  padding: 0 0.7rem;
+  border-radius: 0.5rem;
+  box-shadow: 3px 3px 10px #5A5A5A;
+  -webkit-animation: shake 0.1s linear;
+          animation: shake 0.1s linear;
+}
+.plants-list .plants-item:hover .plants-item__conteiner .plants-item__buy {
+  visibility: visible;
+}
+@-webkit-keyframes shake {
+  0%, 50%, 100% {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(5deg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+}
+@keyframes shake {
+  0%, 50%, 100% {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(5deg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+}
+.plants-list .plants-item__conteiner {
+  position: relative;
   background-color: #EAF2E5;
-  padding-left: 2rem;
   padding-bottom: 1.5rem;
+  height: 80%;
   text-align: start;
 }
-.plants-list .plants-item img {
+.plants-list .plants-item__conteiner img {
   display: block;
   width: 50%;
   height: 60%;
@@ -1666,16 +1706,41 @@ body {
   margin-bottom: 1rem;
   margin-top: 0.5rem;
 }
-.plants-list .plants-item__name {
+.plants-list .plants-item__conteiner .plants-item__name {
   display: block;
   font-weight: bold;
   font-size: 1.5rem;
+  text-align: center;
   margin-bottom: 10px;
 }
-.plants-list .plants-item-rating {
+.plants-list .plants-item__conteiner .plants-item-rating {
   padding: 0;
   display: flex;
   margin-bottom: 10px;
+  margin-left: 1rem;
+}
+.plants-list .plants-item__conteiner .plants-item__price {
+  display: block;
+  margin-left: 1rem;
+  margin-bottom: 5%;
+}
+.plants-list .plants-item__conteiner .plants-item__buy {
+  visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.plants-list .plants-item__conteiner .plants-item__buy .btn {
+  padding: 0.5rem;
+}
+.plants-list .plants-item__conteiner .plants-item__buy .in-stock {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5px 10px;
+  background-color: #FAA44B;
+  opacity: 0.8;
+  border-bottom-left-radius: 10px;
 }
 .plants-btn {
   padding: 1rem 2rem;
@@ -1803,9 +1868,11 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.34);
+  background-color: rgba(0, 0, 0, 0.54);
   z-index: 2;
-  cursor: pointer;
+}
+.instagram-photo__icon:hover svg path {
+  fill: #FAA44B;
 }
 .instagram-photo__img {
   width: 20%;
@@ -1916,6 +1983,9 @@ body {
     -moz-column-gap: 1rem;
          column-gap: 1rem;
   }
+  .header .nav__wrapper .header-nav-item {
+    font-size: 0.8em;
+  }
   .hero-wrapper__top .hero-left .title {
     width: 60%;
     font-size: 2.7rem;
@@ -2000,6 +2070,10 @@ body {
   }
   .header-logo a {
     font-size: 2rem;
+  }
+  .header-nav {
+    -moz-column-gap: 0.5rem;
+         column-gap: 0.5rem;
   }
   .header-nav-item {
     font-size: 0.7rem;
@@ -2448,10 +2522,20 @@ body {
     text-align: center;
     padding: 0;
   }
-  .plants-list .plants-item img {
+  .plants-list .plants-item:hover {
+    padding-bottom: 1rem;
+  }
+  .plants-list .plants-item__conteiner {
+    height: inherit;
+  }
+  .plants-list .plants-item__conteiner img {
     height: 50%;
   }
-  .plants-list .plants-item-rating {
+  .plants-list .plants-item__conteiner .plants-item__price {
+    text-align: center;
+    margin: 1rem auto;
+  }
+  .plants-list .plants-item__conteiner .plants-item-rating {
     justify-content: center;
   }
   .reviews {
