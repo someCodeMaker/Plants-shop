@@ -571,10 +571,25 @@
 
         .plants-item__name {
           display: block;
+          position: relative;
           font-weight: bold;
           font-size: 1.5rem;
           text-align: center;
           margin-bottom: 10px;
+
+          &::before {
+            content: "?";
+            width: 5px;
+            height: 5px;
+            position: absolute;
+            left: 0;
+            top: -5px;
+            border: .5px solid $decor-color;
+            border-radius: 50%;
+            padding: 5px;
+            background: $decor-color;
+            color: #fff;
+          }
         }
 
         .plants-item-rating {
@@ -605,6 +620,7 @@
             position: absolute;
             top: 0;
             right: 0;
+            font-family: "goldman";
             padding: 5px 10px;
             background-color: $decor-color;
             opacity: .8;

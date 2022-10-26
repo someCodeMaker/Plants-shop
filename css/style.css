@@ -1708,10 +1708,24 @@ body {
 }
 .plants-list .plants-item__conteiner .plants-item__name {
   display: block;
+  position: relative;
   font-weight: bold;
   font-size: 1.5rem;
   text-align: center;
   margin-bottom: 10px;
+}
+.plants-list .plants-item__conteiner .plants-item__name::before {
+  content: "?";
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  left: 0;
+  top: -5px;
+  border: 0.5px solid #FAA44B;
+  border-radius: 50%;
+  padding: 5px;
+  background: #FAA44B;
+  color: #fff;
 }
 .plants-list .plants-item__conteiner .plants-item-rating {
   padding: 0;
@@ -1737,6 +1751,7 @@ body {
   position: absolute;
   top: 0;
   right: 0;
+  font-family: "goldman";
   padding: 5px 10px;
   background-color: #FAA44B;
   opacity: 0.8;
