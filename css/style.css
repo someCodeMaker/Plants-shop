@@ -1702,6 +1702,7 @@ body {
 .plants-list .plants-item__conteiner .item-info {
   position: absolute;
   width: 100%;
+  visibility: hidden;
   padding: 1rem;
   background: linear-gradient(45deg, rgb(137, 214, 148) -0.97%, rgb(255, 211, 79) 100.57%);
   color: #4A4A4A;
@@ -1715,23 +1716,7 @@ body {
   font-weight: bold;
   font-family: "goldman";
 }
-.plants-list .plants-item__conteiner img {
-  display: block;
-  width: 50%;
-  height: 60%;
-  margin: 0 auto;
-  margin-bottom: 1rem;
-  margin-top: 0.5rem;
-}
-.plants-list .plants-item__conteiner .plants-item__name {
-  display: block;
-  font-weight: bold;
-  font-size: 1.5rem;
-  text-align: center;
-  margin-bottom: 10px;
-}
-.plants-list .plants-item__conteiner .plants-item__name::before {
-  content: "?";
+.plants-list .plants-item__conteiner .item-question {
   font-family: "goldman";
   font-size: 11px;
   display: flex;
@@ -1749,8 +1734,20 @@ body {
   color: #fff;
   z-index: 3;
 }
-.plants-list .plants-item__conteiner .plants-item__name::before:hover .plants-list__conteiner .item-info {
-  visibility: visible;
+.plants-list .plants-item__conteiner img {
+  display: block;
+  width: 50%;
+  height: 60%;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+}
+.plants-list .plants-item__conteiner .plants-item__name {
+  display: block;
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 10px;
 }
 .plants-list .plants-item__conteiner .plants-item-rating {
   padding: 0;

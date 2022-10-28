@@ -72,7 +72,23 @@ function authorizationBtn() {
 
 authorizationBtn();
 
-// const itemInfo = document.querySelector(".plants-item__name::before");
-// itemInfo.addEventListener("mouseover", (e) => {
-//   console.log()
-// })
+
+//! Hover item question icon
+function hoverInfo() {
+
+  const itemInfo = document.querySelectorAll(".item-question");
+  const itemInfoBlock = document.querySelectorAll(".item-info");
+  itemInfo.forEach((item, index) => {
+    itemInfo[index].addEventListener("mouseover", (e) => {
+      itemInfoBlock[index].style.visibility = "visible";
+
+      if (itemInfoBlock[index].style.visibility == "visible") {
+        itemInfoBlock[index].addEventListener("mouseout", () => {
+          itemInfoBlock[index].style.visibility = "hidden";
+        })
+      }
+    })
+  })
+}
+
+hoverInfo();

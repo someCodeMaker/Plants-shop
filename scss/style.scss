@@ -531,7 +531,6 @@
           .plants-item__buy {
             visibility: visible;
           }
-
         }
       }
 
@@ -564,7 +563,7 @@
         .item-info {
           position: absolute;
           width: 100%;
-          // visibility: hidden;
+          visibility: hidden;
           padding: 1rem;
           background: linear-gradient(45deg, rgb(137, 214, 148) -0.97%, rgb(255, 211, 79) 100.57%);
           color: $text-color;
@@ -583,6 +582,39 @@
 
         }
 
+        .item-question {
+          font-family: "goldman";
+          font-size: 11px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 5px;
+          height: 5px;
+          position: absolute;
+          left: 5%;
+          top: 5%;
+          border: .5px solid $decor-color;
+          border-radius: 50%;
+          padding: 5px;
+          background: $decor-color;
+          color: #fff;
+          z-index: 3;
+
+          // &:hover {
+          //   .plants-list {
+          //     .plants-item {
+          //       &__conteiner {
+          //         span.item-info {
+          //           visibility: visible;
+          //         }
+          //       }
+          //     }
+          //   }
+          // }
+        }
+
+
+
         img {
           display: block;
           width: 50%;
@@ -600,35 +632,35 @@
           text-align: center;
           margin-bottom: 10px;
 
-          &::before {
-            content: "?";
-            font-family: "goldman";
-            font-size: 11px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 5px;
-            height: 5px;
-            position: absolute;
-            left: 5%;
-            top: 5%;
-            border: .5px solid $decor-color;
-            border-radius: 50%;
-            padding: 5px;
-            background: $decor-color;
-            color: #fff;
-            z-index: 3;
+          // &::before {
+          //   content: "?";
+          //   font-family: "goldman";
+          //   font-size: 11px;
+          //   display: flex;
+          //   align-items: center;
+          //   justify-content: center;
+          //   width: 5px;
+          //   height: 5px;
+          //   position: absolute;
+          //   left: 5%;
+          //   top: 5%;
+          //   border: .5px solid $decor-color;
+          //   border-radius: 50%;
+          //   padding: 5px;
+          //   background: $decor-color;
+          //   color: #fff;
+          //   z-index: 3;
 
-            &:hover {
-              .plants-list {
-                &__conteiner {
-                  .item-info {
-                    visibility: visible;
-                  }
-                }
-              }
-            }
-          }
+          //   &:hover {
+          //     .plants-list {
+          //       &__conteiner {
+          //         .item-info {
+          //           visibility: visible;
+          //         }
+          //       }
+          //     }
+          //   }
+          // }
         }
 
         .plants-item-rating {
