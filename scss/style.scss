@@ -520,7 +520,9 @@
       border-radius: .5rem;
       width: 20%;
 
-      &:hover {
+      &:hover,
+      &:active,
+      &:focus {
         background: linear-gradient(45deg, rgb(137, 214, 148) -0.97%, rgb(255, 211, 79) 100.57%);
         padding: 0 .7rem;
         border-radius: .5rem;
@@ -767,6 +769,12 @@
         margin-top: 1rem;
         width: 90%;
         color: #ECECEC;
+      }
+
+      .pagination {
+        position: absolute;
+        bottom: 5%;
+        right: 2%;
       }
     }
 

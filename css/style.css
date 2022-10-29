@@ -406,7 +406,7 @@ a {
 
 a,
 button {
-  cursor: url("/img/pointer.svg"), auto;
+  cursor: pointer;
 }
 
 p,
@@ -792,7 +792,6 @@ body {
   }
 }
 .cart {
-  max-width: 1440px;
   position: fixed;
   top: 0;
   left: 0;
@@ -925,6 +924,7 @@ body {
 .cart-line {
   width: 70%;
   height: 0.5px;
+  margin-left: 18%;
   background: rgba(56, 58, 57, 0.37);
   border: none;
 }
@@ -955,6 +955,7 @@ body {
   position: relative;
   box-shadow: inset 0 0 10px #8F62F5;
   text-align: center;
+  font-size: 1.1rem;
   color: #fff;
 }
 .cart-footer__wrapper .cart-btn span {
@@ -1048,13 +1049,21 @@ body {
 }
 
 @media screen and (max-width: 768px) {
+  .cart {
+    width: 100%;
+    padding-top: 10%;
+  }
+  .cart-line {
+    display: none;
+  }
   .cart .close-btn {
     width: 30px;
     height: 30px;
-    right: 20%;
+    top: 5%;
+    right: 12%;
   }
   .cart-info {
-    width: 50%;
+    width: 55%;
     margin-left: 1rem;
   }
   .cart-items {
@@ -1063,6 +1072,7 @@ body {
   .cart-item {
     align-items: flex-start;
     flex-direction: column;
+    margin-top: 10%;
   }
   .cart-item__conteiner {
     width: 70%;
@@ -1070,12 +1080,13 @@ body {
     margin-top: 1rem;
   }
   .cart-footer {
+    position: fixed;
+    bottom: 5%;
     width: 100%;
     justify-content: start;
   }
   .cart-footer__wrapper {
-    width: 50%;
-    margin-left: 1rem;
+    width: 80%;
   }
 }
 .header {
@@ -1658,7 +1669,7 @@ body {
   border-radius: 0.5rem;
   width: 20%;
 }
-.plants-list .plants-item:hover {
+.plants-list .plants-item:hover, .plants-list .plants-item:active, .plants-list .plants-item:focus {
   background: linear-gradient(45deg, rgb(137, 214, 148) -0.97%, rgb(255, 211, 79) 100.57%);
   padding: 0 0.7rem;
   border-radius: 0.5rem;
@@ -1666,7 +1677,7 @@ body {
   -webkit-animation: shake 0.1s linear;
           animation: shake 0.1s linear;
 }
-.plants-list .plants-item:hover .plants-item__conteiner .plants-item__buy {
+.plants-list .plants-item:hover .plants-item__conteiner .plants-item__buy, .plants-list .plants-item:active .plants-item__conteiner .plants-item__buy, .plants-list .plants-item:focus .plants-item__conteiner .plants-item__buy {
   visibility: visible;
 }
 @-webkit-keyframes shake {
@@ -1832,6 +1843,11 @@ body {
   margin-top: 1rem;
   width: 90%;
   color: #ECECEC;
+}
+.reviews-left .reviews-card .pagination {
+  position: absolute;
+  bottom: 5%;
+  right: 2%;
 }
 .reviews-right {
   width: 50%;
@@ -2359,9 +2375,12 @@ body {
     bottom: 0;
     width: 100%;
     height: 2px;
-    background-color: #FAA44B;
+    background: linear-gradient(to right, #fff 0%, #FAA44B 100%);
+    background-size: 200%;
     transform: rotate(45deg);
     box-shadow: 0 0 5px #FAA44B;
+    -webkit-animation: btn 2s ease infinite;
+            animation: btn 2s ease infinite;
   }
   .header .open::before {
     content: "";
@@ -2370,12 +2389,15 @@ body {
     top: 0;
     width: 100%;
     height: 2px;
-    background-color: #066F14;
+    background: linear-gradient(to right, #fff 0%, #FAA44B 100%);
+    background-size: 200%;
     transform: rotate(-45deg);
-    box-shadow: 0 0 5px #066F14;
+    box-shadow: 0 0 5px #FAA44B;
+    -webkit-animation: btn 2s ease infinite;
+            animation: btn 2s ease infinite;
   }
   .header .nav__wrapper {
-    background: rgba(84, 82, 82, 0.7);
+    background: rgba(84, 82, 82, 0.8);
     display: flex;
     width: 100%;
     height: 100vh;
@@ -2391,7 +2413,7 @@ body {
   .header .nav__wrapper .header-nav {
     text-align: center;
     margin: 0 auto;
-    height: 50vh;
+    height: 45vh;
     flex-direction: column;
     padding: 0;
   }
@@ -2640,6 +2662,42 @@ body {
     flex-direction: column;
     order: 1;
     justify-content: start;
+  }
+  .footer-right__title {
+    position: relative;
+  }
+  .footer-right__title::after {
+    content: " ";
+    position: absolute;
+    visibility: visible;
+    top: 15%;
+    right: 15%;
+    width: 0.5rem;
+    height: 0.5rem;
+    border: 1px solid #FAA44B;
+    border-top: none;
+    border-left: none;
+    -webkit-animation: jumping 1s linear infinite;
+            animation: jumping 1s linear infinite;
+  }
+  .footer-right__title .footer-menu-open .footer-right__title::after {
+    background: #000;
+  }
+  @-webkit-keyframes jumping {
+    0% {
+      transform: translateY(0) scale(1) rotate(45deg);
+    }
+    100% {
+      transform: translateY(0.3rem) scale(1.1) rotate(45deg);
+    }
+  }
+  @keyframes jumping {
+    0% {
+      transform: translateY(0) scale(1) rotate(45deg);
+    }
+    100% {
+      transform: translateY(0.3rem) scale(1.1) rotate(45deg);
+    }
   }
   .footer-right__list {
     height: 0;

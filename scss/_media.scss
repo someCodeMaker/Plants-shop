@@ -515,9 +515,11 @@
         bottom: 0;
         width: 100%;
         height: 2px;
-        background-color: $decor-color;
+        background: linear-gradient(to right, #fff 0%, $decor-color 100%);
+        background-size: 200%;
         transform: rotate(45deg);
         box-shadow: 0 0 5px $decor-color;
+        animation: btn 2s ease infinite;
       }
 
       &::before {
@@ -527,14 +529,16 @@
         top: 0;
         width: 100%;
         height: 2px;
-        background-color: $main-color;
+        background: linear-gradient(to right, #fff 0%, $decor-color 100%);
+        background-size: 200%;
         transform: rotate(-45deg);
-        box-shadow: 0 0 5px $main-color;
+        box-shadow: 0 0 5px $decor-color;
+        animation: btn 2s ease infinite;
       }
     }
 
     .nav__wrapper {
-      background: rgb(84, 82, 82, .7);
+      background: rgb(84, 82, 82, .8);
       display: flex;
       width: 100%;
       height: 100vh;
@@ -552,7 +556,7 @@
 
         text-align: center;
         margin: 0 auto;
-        height: 50vh;
+        height: 45vh;
         flex-direction: column;
         padding: 0;
 
@@ -886,6 +890,45 @@
       flex-direction: column;
       order: 1;
       justify-content: start;
+
+      &__title {
+        position: relative;
+
+        &::after {
+          content: " ";
+          position: absolute;
+          visibility: visible;
+          top: 15%;
+          right: 15%;
+          width: .5rem;
+          height: .5rem;
+          border: 1px solid $decor-color;
+          border-top: none;
+          border-left: none;
+          animation: jumping 1s linear infinite;
+        }
+
+        .footer-menu-open {
+          .footer-right__title {
+            &::after {
+              background: #000;
+            }
+          }
+
+        }
+
+        @keyframes jumping {
+          0% {
+            transform: translateY(0) scale(1) rotate(45deg);
+          }
+
+          100% {
+            transform: translateY(.3rem) scale(1.1) rotate(45deg);
+          }
+        }
+
+      }
+
 
       &__list {
         height: 0;

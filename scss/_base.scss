@@ -15,7 +15,8 @@ a {
 
 a,
 button {
-  cursor: url("/img/pointer.svg"), auto;
+  // cursor: url("/img/pointer.svg"), auto;
+  cursor: pointer;
 }
 
 p,
