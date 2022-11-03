@@ -1,4 +1,7 @@
 
+import { plants, reviews, templates } from "./db.js";
+import { initContent, addContent, fragmentTemplate } from "./init_content.js"
+
 //! burger menu
 //__________________________
 function burger() {
@@ -94,3 +97,8 @@ function hoverInfo() {
 }
 
 hoverInfo();
+
+
+
+initContent(plants, ".plants-list", templates.plant); //! initial html markup plant in plants-list 
+// initContent(reviews, ".review-card__wrapper", templates.review)//! initial html markup reviews in plants-list
