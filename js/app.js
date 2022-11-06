@@ -2,6 +2,8 @@
 import { plants, reviews, templates } from "./db.js";
 import { initContent, addContent, fragmentTemplate } from "./init_content.js"
 
+initContent(plants, ".plants-list", templates.plant); //! initial html markup plant in plants-list 
+
 //! burger menu
 //__________________________
 function burger() {
@@ -100,5 +102,4 @@ hoverInfo();
 
 
 
-initContent(plants, ".plants-list", templates.plant); //! initial html markup plant in plants-list 
 // initContent(reviews, ".review-card__wrapper", templates.review)//! initial html markup reviews in plants-list
