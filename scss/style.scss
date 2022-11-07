@@ -731,6 +731,7 @@
     .reviews-card {
       color: rgba(236, 236, 236, .6);
       width: 110%;
+      min-height: 30vh;
       position: relative;
       background-color: $main-color;
       padding: 2% 2% 3% 3%;
