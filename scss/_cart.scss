@@ -174,6 +174,20 @@
       }
     }
   }
+
+  &-empty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    font-family: $title-font;
+    opacity: .7;
+    margin: 10% 0;
+  }
+}
+
+.open-cart {
+  display: block;
 }
 
 @media screen and (max-width: 768px) {

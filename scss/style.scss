@@ -8,6 +8,34 @@
   align-items: center;
   height: 10vh;
 
+  &-cart {
+    background: url("/img/cart.png") center / contain no-repeat;
+    width: 10%;
+    height: inherit;
+    border: none;
+    position: relative;
+
+    .in-cart {
+      border-radius: 50%;
+      position: absolute;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      top: -11%;
+      right: 0;
+      color: $main-color;
+      font-size: .8rem;
+      width: 17px;
+      height: 17px;
+      border: 1px solid $decor-color;
+      box-shadow: inset 0 0 5px $decor-color;
+    }
+
+    .plants-includes {
+      display: flex;
+    }
+  }
+
   &-logo {
     width: 20vw;
 
@@ -64,6 +92,7 @@
         @include borderAnimation ($decor-color, $decor-color, $decor-color,
           100%);
       }
+
 
       &:hover {
         background: $decor-color;

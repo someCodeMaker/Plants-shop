@@ -1,6 +1,16 @@
 
 import { fragmentTemplate } from "./init_content.js";
 
+const account = [
+  {
+    name: "Admin",
+    password: "admin",
+    email: "denishudzenko@gmail.com",
+    phone: "+380939505097"
+  }
+]
+
+
 //? items array
 const plants = [
   {
@@ -112,7 +122,7 @@ const templates = {
       <span class="plants-item__price">$${object.price}</span>
       <div class="plants-item__buy">
         <span class="in-stock">${object.stock} left</span>
-        <button class="btn">To cart</button>
+        <button id="to-cart" class="btn">To cart</button>
       </div>
     </div>
   </li>`;
@@ -134,20 +144,20 @@ const templates = {
     return fragmentTemplate(fragment);
   },
 
-  basketPlant(object) {
-    const fragment = `<div class="cart-item">
+  cartItem(object) {
+    const fragment = `<li class="cart-item">
                 <div class="cart-item__left">
                   <img src="${object.image}" alt="plant" class="cart-item__img">
                   <span class="cart-item__name">${object.name}</span>
                 </div>
                 <div class="cart-item__conteiner">
-                  <span class="cart-item__quantity"><button class="cart-item-btn">-</button> 1<button
+                  <span class="cart-item__quantity"><button class="cart-item-btn">-</button>${object.value}<button
                       class="cart-item-btn">+</button> </span>
                   <span class="cart-item__price">$${object.price}</span>
-                  <span class="cart-item__total">50$</span>
+                  <span class="cart-item__total">${object.price * object.stock}</span>
                   <button class="cart-item__delete">+</button>
                 </div>
-                </div>`
+                </li>`
     return fragmentTemplate(fragment);
   }
 };

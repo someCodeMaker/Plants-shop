@@ -424,7 +424,7 @@ body {
   box-sizing: border-box;
   max-width: 1440px;
   margin: 0 auto;
-  font-size: 1rem;
+  font-size: 16px;
   font-family: nunito, serif;
   font-weight: 400;
   color: #4A4A4A;
@@ -1047,6 +1047,19 @@ body {
 .cart-footer__wrapper .cart-btn:hover .cart-btn__holder span {
   display: none;
 }
+.cart-empty {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  font-family: goldman, serif;
+  opacity: 0.7;
+  margin: 10% 0;
+}
+
+.open-cart {
+  display: block;
+}
 
 @media screen and (max-width: 768px) {
   .cart {
@@ -1094,6 +1107,31 @@ body {
   justify-content: space-between;
   align-items: center;
   height: 10vh;
+}
+.header-cart {
+  background: url("/img/cart.png") center/contain no-repeat;
+  width: 10%;
+  height: inherit;
+  border: none;
+  position: relative;
+}
+.header-cart .in-cart {
+  border-radius: 50%;
+  position: absolute;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  top: -11%;
+  right: 0;
+  color: #066F14;
+  font-size: 0.8rem;
+  width: 17px;
+  height: 17px;
+  border: 1px solid #FAA44B;
+  box-shadow: inset 0 0 5px #FAA44B;
+}
+.header-cart .plants-includes {
+  display: flex;
 }
 .header-logo {
   width: 20vw;
@@ -2503,7 +2541,7 @@ body {
     width: 100%;
   }
   .hero-wrapper__top .hero-left .hero-numbers__item b {
-    font-size: 1.5rem;
+    font-size: 24px;
   }
   .hero-wrapper__top .hero-right {
     display: none;

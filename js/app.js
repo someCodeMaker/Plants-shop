@@ -1,8 +1,27 @@
 
 import { plants, reviews, templates } from "./db.js";
-import { initContent, addContent, fragmentTemplate } from "./init_content.js"
+import { initContent, addContent, fragmentTemplate } from "./init_content.js";
+import { basketApp } from "./cart.js";
 
 initContent(plants, ".plants-list", templates.plant); //! initial html markup plant in plants-list 
+
+
+// function onBasket() {
+//   const basketButton = document.getElementById("cart-icon");
+//   const cart = document.getElementById("cart");
+//   const cartClose = document.getElementById("close-cart");
+
+//   basketButton.addEventListener("click", (elem) => {
+//     cart.classList.add("open-cart");
+//     // checkIfEmpty()
+
+//   });
+
+//   cartClose.addEventListener("click", () => {
+//     cart.classList.remove("open-cart")
+//   })
+// }
+// onBasket();
 
 
 //! burger menu
@@ -179,5 +198,5 @@ function reviewPaginationControl(arr) {
 reviewPaginationControl(reviews);
 
 
-
+basketApp();
 
