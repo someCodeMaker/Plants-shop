@@ -151,10 +151,10 @@ const templates = {
                   <span class="cart-item__name">${object.name}</span>
                 </div>
                 <div class="cart-item__conteiner">
-                  <span class="cart-item__quantity"><button class="cart-item-btn">-</button>${object.value}<button
-                      class="cart-item-btn">+</button> </span>
+                  <span class="cart-item__quantity"><button class="cart-item-btn cart-item__btn-minus">-</button><span class="item-count">${object.value}</span><button
+                      class="cart-item-btn cart-item__btn-plus">+</button> </span>
                   <span class="cart-item__price">$${object.price}</span>
-                  <span class="cart-item__total">${object.price * object.stock}</span>
+                  <span class="cart-item__total">${object.price * object.value}</span>
                   <button class="cart-item__delete">+</button>
                 </div>
                 </li>`

@@ -112,47 +112,20 @@
       <button id="close-cart" class="close-btn close-cart"></button>
 
       <ul class="cart-info">
-        <li class="cart-info__item">Quantity</li>
-        <li class="cart-info__item">price</li>
-        <li class="cart-info__item">to tal</li>
+        <li class="cart-info__item">Amount</li>
+        <li class="cart-info__item">Price</li>
+        <li class="cart-info__item">Total</li>
       </ul>
 
       <ul class="cart-items">
-        <!-- 
-        <li class="cart-item">
-          <div class="cart-item__left">
-            <img src="/img/item1.png" alt="plant" class="cart-item__img">
-            <span class="cart-item__name">Outdoor Plant</span>
-          </div>
-          <div class="cart-item__conteiner">
-            <span class="cart-item__quantity"><button class="cart-item-btn">-</button> 1<button
-                class="cart-item-btn">+</button> </span>
-            <span class="cart-item__price">50$</span>
-            <span class="cart-item__total">50$</span>
-            <button class="cart-item__delete">+</button>
-          </div>
-        </li>
-
-        <li class="cart-item">
-          <div class="cart-item__left">
-            <img src="/img/item3.png" alt="plant" class="cart-item__img">
-            <span class="cart-item__name">Outdoor Plant</span>
-          </div>
-          <div class="cart-item__conteiner">
-            <span class="cart-item__quantity"><button class="cart-item-btn">-</button>2<button
-                class="cart-item-btn">+</button> </span>
-            <span class="cart-item__price">50$</span>
-            <span class="cart-item__total">100$</span>
-            <button class="cart-item__delete">+</button>
-          </div>
-        </li> -->
-
-        <hr class="cart-line">
+        <!-- initial by JS -->
       </ul>
+
+      <hr class="cart-line">
 
       <div class="cart-footer">
         <div class="cart-footer__wrapper">
-          <div class="total-price"><span>Total:</span><span>150$</span></div>
+          <div class="total-price"><span>Total:</span><span data-totalPrice></span></div>
           <button class="btn cart-btn">
             <div class="cart-btn__holder">Buy It <span></span><span></span><span></span><span></span></div>
           </button>

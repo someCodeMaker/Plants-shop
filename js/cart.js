@@ -57,7 +57,7 @@ export function basketApp() {
 
   // indicator count items on basket button
   function showItemCountOnBasket() {
-    const plantsInCart = document.querySelector("in-cart");
+    const plantsInCart = document.querySelector(".in-cart");
 
     if (cartItems == "") {
       plantsInCart.classList.remove("plants-includes");
@@ -106,8 +106,8 @@ export function basketApp() {
   // make order price calculation
   function multiply() {
     // item price and summary price variable
-    let priceTag = document.querySelectorAll('.basket__item-price');
-    const price = document.getElementById("total-price");
+    let priceTag = document.querySelectorAll('.cart-item__total');
+    const price = document.querySelector("[data-totalPrice]");
     let result;
     let sum = 0;
 
@@ -123,20 +123,40 @@ export function basketApp() {
 
   // find index of current item element using compering arrays object
   function findIndex(arr, item) {
-    let currentItem = arr.find((e) => e === item);
+    let currentItem = arr.find((e) => e == item);
     return arr.indexOf(currentItem);
   }
 
 
   // add eventListener for item inputs in basket. Allow change count of same item adn auto change equal price
-  function eventInputChange(input) {
+  function eventChangeAmount(arr, itemsArray) {
+    const btnPlus = document.querySelectorAll(".cart-item__btn-plus");
+    const btnMinus = document.querySelectorAll(".cart-item__btn-minus");
+    const itemCount = document.querySelectorAll(".item-count");
 
-    cartItems.forEach((item, index) => {
-      input[index].addEventListener('input', (e) => {
-        item.value = input[index].value;
-        multiply(index);
-      })
-    })
+
+    arr.forEach((item, index) => {
+
+      btnPlus[index].addEventListener('click', (e) => {
+        if (item.value <= item.stock - 1) {
+          item.value += 1;
+          itemCount[index].innerText = item.value;
+          multiply(index);
+        }
+        return;
+
+      });
+
+      btnMinus[index].addEventListener('click', (e) => {
+        if (item.value > 1) {
+          item.value -= 1;
+          itemCount[index].innerText = item.value;
+          multiply(index);
+        }
+        return;
+
+      });
+    });
 
   }
 
@@ -144,23 +164,26 @@ export function basketApp() {
   // filter basket to only unique items and add value depends on item counts
   function initBasket(arr, item, index) {
 
-    const itemValue = document.querySelectorAll('#item-counter'); //items values in basket array
     let arrItemIndex = findIndex(arr, item);
 
 
     // check if in basket same item just add +1 value to input field then end function.
     if (plantsName.includes(cart[index].name)) {
       item.value += 1;
-      itemValue[arrItemIndex].value = item.value;
+
+      // itemCount[index].innerText = item.value;
       return;
     } else {
       item.value += 1;
+      // itemCount[index].innerText = item.value;
       addItemToCart(item, ".cart-items", templates.cartItem);  //initial items in cart
       plantsName.push(item.name);
 
-      const itemValue = document.querySelectorAll('#item-counter'); //items values in basket for first item in basket without it won't work calculation
-      //TODO eventInputChange(itemValue);
-
+      eventChangeAmount(cartItems, plants);
+      const itemCount = document.querySelectorAll(".item-count");
+      itemCount.forEach((elem) => {
+        elem.innerText = item.value;
+      })
       // remove "Basket is empty" text from basket main section
       if (cartItems != '') {
         // emptyBasketText.style.display = "none";
@@ -182,13 +205,8 @@ export function basketApp() {
   // button click to add content to cart and logic
   cart.forEach((item, index) => {
     toCart[index].addEventListener('click', function (elem) {
-      console.log(cart);
-
-      initBasket(cart, item, index);
+      initBasket(cartItems, item, index);
       multiply();
     });
   })
 }
-
-// init a basket logic
-// basketApp();
